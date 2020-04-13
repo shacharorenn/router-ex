@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Search from './components/Search';
+import TodoListFunction from './components/TodoListFunction';
+import {Route} from 'react-router-dom';
+import TodoListClass from './components/TodoListClass';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h1>Todo List route communication</h1>
+        <div className="row">
+        <div className="col-6">
+            <TodoListClass/>
+          </div>
+          <div className="col-6">
+            <Search/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
